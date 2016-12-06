@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NavigationDrawer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nadchodzace_zawody">Nadchodzące zawody</string>
+    <string name="wyniki">Wyniki</string>
+    <string name="zaklady">Zakłady</string>
+    <string name="zawodnicy">Zawodnicy</string>
+    <string name="zespoly">Zespoły</string>
+    <string name="mecze">Mecze w TV</string>
+</resources>
