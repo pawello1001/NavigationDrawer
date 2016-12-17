@@ -4,6 +4,7 @@ package com.example.pawe.navigationdrawer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +43,8 @@ public class MeczeTVFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View rootView = inflater.inflate(R.layout.meczetv_fragment, container, false);
+
+       // getActionBar().setTitle("OMG");
 
         scores.add(new MeczeTVItem(R.drawable.barcelona, clubs[0], "3", "3", clubs[1], R.drawable.real_madrid));
         scores.add(new MeczeTVItem(R.drawable.barcelona, clubs[0], "3", "3", clubs[1], R.drawable.real_madrid));

@@ -3,11 +3,13 @@ package com.example.pawe.navigationdrawer;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -55,15 +57,28 @@ public class ZakladyFragment extends Fragment {
         scores.add(new ZakladyItem(R.drawable.monaco, clubs[16], "2", "1", clubs[17], R.drawable.bordeaux));
         scores.add(new ZakladyItem(R.drawable.sevilla, clubs[18], "1", "3", clubs[19], R.drawable.liverpool));
 
+        FloatingActionButton butt = (FloatingActionButton) rootView.findViewById(R.id.plus_button);
+        butt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),ZakladyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         ZakladyListAdapter adapter = new ZakladyListAdapter(this.getActivity(), scores);
         listView = (ListView) rootView.findViewById(R.id.resultListView);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getContext(), NadchodzaceZawodyActivity.class);
+                Intent intent = new Intent(getContext(), ZakladyActivity.class);
                 intent.putExtra("counter", position);
                 startActivity(intent);
+
+
+
             }
         });
 
@@ -85,4 +100,6 @@ public class ZakladyFragment extends Fragment {
         scores.add(new ZakladyItem(R.drawable.sevilla, clubs[18], "1", "3", clubs[19], R.drawable.liverpool));
         return scores;
     }
+
+
 }

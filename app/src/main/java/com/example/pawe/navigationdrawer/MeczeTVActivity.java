@@ -24,6 +24,8 @@ public class MeczeTVActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.meczetv_activity);
 
+      //  getActionBar().setTitle("New");
+
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
