@@ -1,9 +1,6 @@
 package com.example.pawe.navigationdrawer;
 
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +30,7 @@ public class ZakladyListAdapter  extends ArrayAdapter<ZakladyItem> {
         View rowView = inflater.inflate(R.layout.zaklady_list, null, true);
 
         ImageView hostImage = (ImageView) rowView.findViewById(R.id.wynikiHostImage);
-        ImageView guestImage = (ImageView) rowView.findViewById(R.id.wynikiGuestImage);
+        ImageView guestImage = (ImageView) rowView.findViewById(R.id.nadchodzaceZawodyGuestImage);
         TextView hostName = (TextView) rowView.findViewById(R.id.wynikiHost);
         TextView guestName = (TextView) rowView.findViewById(R.id.wynikiGuest);
 

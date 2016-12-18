@@ -1,9 +1,7 @@
 package com.example.pawe.navigationdrawer;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

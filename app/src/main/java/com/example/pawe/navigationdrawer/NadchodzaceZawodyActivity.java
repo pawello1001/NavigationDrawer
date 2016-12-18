@@ -1,14 +1,11 @@
 package com.example.pawe.navigationdrawer;
 
-import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -16,7 +13,7 @@ public class NadchodzaceZawodyActivity extends AppCompatActivity {
 
     int position = 0;
     ImageView hostImage, guestImage;
-    TextView hostName, guestName;
+    TextView hostName, guestName, date;
     TextView posiadanie, strzaly, strzalyCelne, faule, spalone;
     Random r,r2;
     @Override
@@ -35,7 +32,6 @@ public class NadchodzaceZawodyActivity extends AppCompatActivity {
         if (extras != null) {
             position = extras.getInt("counter");
         }
-        System.out.println(position + "lololo");
         WynikiFragment wf = new WynikiFragment();
         List<WynikiItem> list = wf.getScores();
 
@@ -67,22 +63,18 @@ public class NadchodzaceZawodyActivity extends AppCompatActivity {
         guestImage = (ImageView) findViewById(R.id.wynikiStatsGuestImageView);
         hostName = (TextView) findViewById(R.id.wynikiStatsHostName);
         guestName = (TextView) findViewById(R.id.wynikiStatsGuestName);
-
-
-
+        date = (TextView) findViewById(R.id.nadchodzaceZawodyData);
 
         hostImage.setImageResource(wynikiItem.hostImage);
         guestImage.setImageResource(wynikiItem.guestImage);
         hostName.setText(wynikiItem.host);
         guestName.setText(wynikiItem.guest);
 
-
         posiadanie = (TextView) findViewById(R.id.data);
         strzaly = (TextView) findViewById(R.id.godzina);
         strzalyCelne = (TextView) findViewById(R.id.kraj);
         faule = (TextView) findViewById(R.id.miasto);
         spalone = (TextView) findViewById(R.id.stadion);
-
 
         r = new Random();
         r2 = new Random();

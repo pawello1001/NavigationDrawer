@@ -6,7 +6,7 @@
     tools:context="com.example.pawe.navigationdrawer.NadchodzaceZawodyFragment">
 
     <ListView
-        android:id="@+id/resultListView"
+        android:id="@+id/incomingListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     </ListView>

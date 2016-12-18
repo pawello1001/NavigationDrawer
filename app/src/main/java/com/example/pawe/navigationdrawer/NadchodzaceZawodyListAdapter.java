@@ -1,9 +1,6 @@
 package com.example.pawe.navigationdrawer;
 
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,30 +17,28 @@ import java.util.List;
 public class NadchodzaceZawodyListAdapter  extends ArrayAdapter<NadchodzaceZawodyItem> {
 
     private final Context context;
-    List<NadchodzaceZawodyItem> scores;
+    List<NadchodzaceZawodyItem> incomings;
 
-    public NadchodzaceZawodyListAdapter(Context context, List<NadchodzaceZawodyItem> scores) {
-        super(context, R.layout.nadchodzace_zawody_list, scores);
+    public NadchodzaceZawodyListAdapter(Context context, List<NadchodzaceZawodyItem> incomings) {
+        super(context, R.layout.nadchodzace_zawody_list, incomings);
         this.context = context;
-        this.scores = scores;
+        this.incomings = incomings;
     }
 
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.nadchodzace_zawody_list, null, true);
+        ImageView hostImage = (ImageView) rowView.findViewById(R.id.nadchodzaceZawodyHostImage);
+        ImageView guestImage = (ImageView) rowView.findViewById(R.id.nadchodzaceZawodyGuestImage);
+        TextView hostName = (TextView) rowView.findViewById(R.id.nadchodzaceZawodyHost);
+        TextView guestName = (TextView) rowView.findViewById(R.id.nadchodzaceZawodyGuest);
+        TextView date  =(TextView) rowView.findViewById(R.id.nadchodzaceZawodyData);
 
-        ImageView hostImage = (ImageView) rowView.findViewById(R.id.wynikiHostImage);
-        ImageView guestImage = (ImageView) rowView.findViewById(R.id.wynikiGuestImage);
-        TextView hostName = (TextView) rowView.findViewById(R.id.wynikiHost);
-        TextView guestName = (TextView) rowView.findViewById(R.id.wynikiGuest);
-
-
-
-        hostImage.setImageResource(scores.get(position).hostImage);
-        guestImage.setImageResource(scores.get(position).guestImage);
-        hostName.setText(scores.get(position).host);
-        guestName.setText(scores.get(position).guest);
-
+        hostImage.setImageResource(incomings.get(position).hostImage);
+        guestImage.setImageResource(incomings.get(position).guestImage);
+        hostName.setText(incomings.get(position).host);
+        guestName.setText(incomings.get(position).guest);
+        date.setText(incomings.get(position).date);
         return rowView;
     }
 }

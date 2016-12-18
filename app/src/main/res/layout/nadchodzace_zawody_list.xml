@@ -4,39 +4,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
-        android:id="@+id/wynikiHostImage"
+        android:id="@+id/nadchodzaceZawodyHostImage"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginLeft="5dp" />
 
     <TextView
-        android:id="@+id/wynikiHost"
+        android:id="@+id/nadchodzaceZawodyHost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/dwukropek"
+        android:layout_toLeftOf="@+id/nadchodzaceZawodyDwukropek"
         android:layout_centerInParent="true"
-        android:textSize="15dp"/>
+        android:textSize="15dp"
+        android:textColor="@color/colorAccent"/>
 
     <TextView
-        android:id="@+id/dwukropek"
+        android:id="@+id/nadchodzaceZawodyGuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/nadchodzaceZawodyDwukropek"
+        android:layout_centerInParent="true"
+        android:textSize="15dp"
+        android:textColor="@color/colorAccent"/>
+
+    <TextView
+        android:id="@+id/nadchodzaceZawodyData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/nadchodzaceZawodyDwukropek"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:textSize="15dp"
-        android:layout_centerInParent="true"
+        android:layout_below="@+id/nadchodzaceZawodyData"
         android:text=" : "/>
 
 
-    <TextView
-        android:id="@+id/wynikiGuest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/dwukropek"
-        android:layout_centerInParent="true"
-        android:textSize="15dp"/>
-
     <ImageView
-        android:id="@+id/wynikiGuestImage"
+        android:id="@+id/nadchodzaceZawodyGuestImage"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
