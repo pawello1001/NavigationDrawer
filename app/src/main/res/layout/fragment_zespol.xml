@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    tools:context="com.example.pawe.navigationdrawer.ZespolFragment"
+    android:background="@drawable/gradient">
+
+    <ImageView
+        android:id="@+id/zespolImageView"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <TableLayout
+        android:id="@+id/zespolTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zespolImageView"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:stretchColumns="1"
+        android:background="#99ffc8">
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:layout_gravity="left"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="NZ: "/>
+            <TextView android:id="@+id/zespolName"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryText"
+                android:fontFamily="sans-serif-condensed" />
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:layout_gravity="left"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="DZ: "/>
+            <TextView android:id="@+id/zespolDate"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryText"
+                android:fontFamily="sans-serif-condensed" />
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:layout_gravity="left"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="LT: "/>
+            <TextView android:id="@+id/zespolLocalTitles"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryText"
+                android:fontFamily="sans-serif-condensed"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:layout_gravity="left"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="MT: "/>
+            <TextView android:id="@+id/zespolGlobalTitles"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryText"
+                android:fontFamily="sans-serif-condensed"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:layout_gravity="left"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="OT: "/>
+            <TextView android:id="@+id/zespolCoach"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryText"
+                android:fontFamily="sans-serif-condensed"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:layout_gravity="left"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="ST: "/>
+            <TextView android:id="@+id/zespolStadium"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryText"
+                android:fontFamily="sans-serif-condensed"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:layout_gravity="left"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="BR: "/>
+            <TextView android:id="@+id/zespolColors"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryText"
+                android:fontFamily="sans-serif-condensed"/>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zespolTable"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="NZ - Nazwa Zespołu\nDZ - Data Założenia\nLT - Ligowe Tytuły\nMT - Międzynarodowe Tytuły\nOT - Obecny Trener\nST - Stadion klubowy\nBR - Barwy klubowe"
+        />
+
+</RelativeLayout>

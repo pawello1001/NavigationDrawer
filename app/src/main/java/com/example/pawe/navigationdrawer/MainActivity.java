@@ -3,6 +3,7 @@ package com.example.pawe.navigationdrawer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -74,7 +75,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.zawodnicy) {
 
         } else if (id == R.id.zespoly) {
-
+            ZespolyFragment zespolyFragment = new ZespolyFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, zespolyFragment);
+            fragmentTransaction.commit();
         } else if (id == R.id.mecze) {
 
         }

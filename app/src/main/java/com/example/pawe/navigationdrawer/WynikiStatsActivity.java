@@ -2,9 +2,13 @@ package com.example.pawe.navigationdrawer;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,6 +23,7 @@ public class WynikiStatsActivity extends AppCompatActivity {
     TextView hostName, guestName, hostScore, guestScore;
     TextView posiadanie, strzaly, strzalyCelne, faule, spalone, zolteKartki, czerwoneKartki;
     Random r;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +40,6 @@ public class WynikiStatsActivity extends AppCompatActivity {
         if (extras != null) {
             position = extras.getInt("counter");
         }
-        System.out.println(position + "lololo");
         WynikiFragment wf = new WynikiFragment();
         List<WynikiItem> list = wf.getScores();
 
@@ -87,5 +91,21 @@ public class WynikiStatsActivity extends AppCompatActivity {
         spalone.setText(r.nextInt(7) + "   SPALONE   " + r.nextInt(7));
         zolteKartki.setText(r.nextInt(4) + "   ŻÓŁTE KARTKI   " + r.nextInt(4));
         czerwoneKartki.setText(r.nextInt(2) + "   CZERWONE KARTKI   " +r.nextInt(2));
+
+        hostImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(12);
+                finish();
+            }
+        });
+
+        guestImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(12);
+                finish();
+            }
+        });
     }
 }

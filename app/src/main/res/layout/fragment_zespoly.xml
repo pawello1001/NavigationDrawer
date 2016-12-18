@@ -1,0 +1,15 @@
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.pawe.navigationdrawer.ZespolyFragment"
+    android:numColumns="auto_fit"
+    android:columnWidth="128dp"
+    android:horizontalSpacing="10dp"
+    android:verticalSpacing="10dp"
+    android:gravity="center"
+    android:stretchMode="columnWidth"
+    android:id="@+id/grid_view_zespoly"
+    android:layout_marginTop="?attr/actionBarSize">
+
+</GridView>

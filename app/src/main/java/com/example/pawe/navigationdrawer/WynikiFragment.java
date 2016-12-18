@@ -4,6 +4,8 @@ package com.example.pawe.navigationdrawer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +26,6 @@ public class WynikiFragment extends Fragment {
     }
 
     ListView listView;
-
     List<WynikiItem> scores = new ArrayList<WynikiItem>();
     String[] clubs = {
             " Barcelona ", " Real Madrid ", " Arsenal FC ",
@@ -44,7 +45,6 @@ public class WynikiFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_wyniki, container, false);
 
         scores.add(new WynikiItem(R.drawable.barcelona, clubs[0], "3", "3", clubs[1], R.drawable.real_madrid));
-        scores.add(new WynikiItem(R.drawable.barcelona, clubs[0], "3", "3", clubs[1], R.drawable.real_madrid));
         scores.add(new WynikiItem(R.drawable.arsenal, clubs[2], "2", "2", clubs[3], R.drawable.bayern_munchen));
         scores.add(new WynikiItem(R.drawable.everton, clubs[4], "1", "4", clubs[5], R.drawable.tottenham));
         scores.add(new WynikiItem(R.drawable.chelsea, clubs[6], "3", "2", clubs[7], R.drawable.psg));
@@ -62,12 +62,23 @@ public class WynikiFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getContext(), WynikiStatsActivity.class);
-                intent.putExtra("counter", position);
-                startActivity(intent);
+                intent.putExtra("counter", position+1);
+                startActivityForResult(intent, 2);
             }
         });
 
         return rootView;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == 12) {
+            ZespolFragment fragment = new ZespolFragment();
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
+        }
     }
 
     public List<WynikiItem> getScores() {

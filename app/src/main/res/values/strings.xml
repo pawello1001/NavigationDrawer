@@ -10,4 +10,7 @@
     <string name="zawodnicy">Zawodnicy</string>
     <string name="zespoly">Zespoły</string>
     <string name="mecze">Mecze w TV</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
