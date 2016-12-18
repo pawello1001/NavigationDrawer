@@ -61,7 +61,7 @@ public class ZakladyFragment extends Fragment {
         butt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(),ZakladyActivity.class);
+                Intent intent = new Intent(getContext(),ZakladNewActivity.class);
                 startActivity(intent);
             }
         });

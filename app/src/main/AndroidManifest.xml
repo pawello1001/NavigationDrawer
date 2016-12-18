@@ -26,6 +26,8 @@
             android:theme="@style/AppTheme.MeczeTVPopUpTransparent"></activity>
         <activity android:name=".ZakladyActivity"
             android:theme="@style/AppTheme.ZakladyPopUpTransparent"></activity>
+        <activity android:name=".ZakladNewActivity"
+            android:theme="@style/AppTheme.ZakladNewPopUpTransparent"></activity>
     </application>
 
     <supports-screens android:resizeable="true"
