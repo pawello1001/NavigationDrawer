@@ -20,6 +20,22 @@
         </activity>
         <activity android:name=".WynikiStatsActivity"
             android:theme="@style/AppTheme.WynikiPopUpTransparent"></activity>
+        <activity android:name=".NadchodzaceZawodyActivity"
+            android:theme="@style/AppTheme.ZawodyPopUpTransparent"></activity>
+        <activity android:name=".MeczeTVActivity"
+            android:theme="@style/AppTheme.MeczeTVPopUpTransparent"></activity>
+        <activity android:name=".ZakladyActivity"
+            android:theme="@style/AppTheme.ZakladyPopUpTransparent"></activity>
+        <activity android:name=".ZakladNewActivity"
+            android:theme="@style/AppTheme.ZakladNewPopUpTransparent"></activity>
     </application>
+
+    <supports-screens android:resizeable="true"
+    android:smallScreens="true"
+    android:normalScreens="true"
+    android:largeScreens="true"
+    android:xlargeScreens="true"
+    android:anyDensity="true"
+/>
 
 </manifest>

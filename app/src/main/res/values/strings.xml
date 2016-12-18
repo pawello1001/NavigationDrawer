@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">NavigationDrawer</string>
+    <string name="app_name2">Wyniki</string>
+    <string name="app_name3">Mecze w TV</string>
+    <string name="app_name4">Nadchodzące zawody</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

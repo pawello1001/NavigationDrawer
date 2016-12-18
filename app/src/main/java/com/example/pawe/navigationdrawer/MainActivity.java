@@ -16,6 +16,7 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
     NavigationView navigationView = null;
     Toolbar toolbar = null;
     @Override
@@ -23,11 +24,13 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        NadchodzaceZawodyFragment nadchodzaceZawodyFragment = new NadchodzaceZawodyFragment();
-        android.support.v4.app.FragmentTransaction fragmentTransaction =
-                getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, nadchodzaceZawodyFragment);
-        fragmentTransaction.commit();
+       // NadchodzaceZawodyFragment nadchodzaceZawodyFragment = new NadchodzaceZawodyFragment();
+
+
+      //  android.support.v4.app.FragmentTransaction fragmentTransaction =
+        //        getSupportFragmentManager().beginTransaction();
+     //   fragmentTransaction.replace(R.id.fragment_container, nadchodzaceZawodyFragment);
+      //  fragmentTransaction.commit();
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -59,18 +62,28 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nadchodzace_zawody) {
+
             NadchodzaceZawodyFragment nadchodzaceZawodyFragment = new NadchodzaceZawodyFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, nadchodzaceZawodyFragment);
             fragmentTransaction.commit();
+
         } else if (id == R.id.wyniki) {
+
             WynikiFragment mainFragment = new WynikiFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, mainFragment);
             fragmentTransaction.commit();
+
         } else if (id == R.id.zaklady) {
+
+            ZakladyFragment zakladyFragment = new ZakladyFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, zakladyFragment);
+            fragmentTransaction.commit();
 
         } else if (id == R.id.zawodnicy) {
 
@@ -81,6 +94,11 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.commit();
         } else if (id == R.id.mecze) {
 
+            MeczeTVFragment meczetvFragment = new MeczeTVFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, meczetvFragment);
+            fragmentTransaction.commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

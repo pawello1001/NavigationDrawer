@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/zaklady_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.pawe.navigationdrawer.ZakladyActivity">
+
+    <ImageView
+        android:id="@+id/wynikiStatsHostImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="5dp"/>
+    <TextView
+        android:id="@+id/wynikiStatsHostName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wynikiStatsHostImageView"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/wynikiStatsDwukropek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text=" : "/>
+
+
+    <ImageView
+        android:id="@+id/wynikiStatsGuestImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="5dp"/>
+
+    <TextView
+        android:id="@+id/wynikiStatsGuestName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wynikiStatsGuestImageView"
+        android:layout_alignLeft="@+id/wynikiStatsGuestImageView"
+        android:layout_alignStart="@+id/wynikiStatsGuestImageView"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorYellow">
+            <TextView android:id="@+id/data"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/colorBlack"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorYellow">
+            <TextView android:id="@+id/godzina"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/colorBlack"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorYellow">
+            <TextView android:id="@+id/kraj"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/colorBlack"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorYellow">
+            <TextView android:id="@+id/miasto"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/colorBlack"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorYellow">
+            <TextView android:id="@+id/stadion"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/colorBlack"/>
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
