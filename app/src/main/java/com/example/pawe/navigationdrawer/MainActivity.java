@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, zakladyFragment);
             fragmentTransaction.commit();
 
+
         } else if (id == R.id.zawodnicy) {
 
         } else if (id == R.id.zespoly) {

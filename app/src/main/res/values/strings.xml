@@ -13,6 +13,10 @@
     <string name="zawodnicy">Zawodnicy</string>
     <string name="zespoly">Zespoły</string>
     <string name="mecze">Mecze w TV</string>
+    <string name="news">Wiadomości</string>
+    <string name="info">Informacje</string>
+    <string name="setting">Ustawienia</string>
+    <string name="home">Strona główna</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -39,9 +39,9 @@ public class ZakladNewActivity extends AppCompatActivity {
         }
         System.out.println(position + "lololo");
         ZakladyFragment wf = new ZakladyFragment();
-        List<ZakladyItem> list = wf.getScores();
+      //  List<ZakladyItem> list = wf.getScores();
 
-        ZakladyItem wynikiItem = list.get(position);
+     //   ZakladyItem wynikiItem = list.get(position);
 
         String[] clubs = {
                 " Barcelona ", " Real Madrid ", " Arsenal FC ",

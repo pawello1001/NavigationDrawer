@@ -1,25 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nadchodzace_zawody"
-            android:title="@string/nadchodzace_zawody" />
-        <item
-            android:id="@+id/wyniki"
-            android:title="@string/wyniki" />
-        <item
-            android:id="@+id/zaklady"
-            android:title="@string/zaklady" />
-        <item
-            android:id="@+id/zawodnicy"
-            android:title="@string/zawodnicy" />
+
+        <group android:checkableBehavior="single"
+            android:id="@+id/group1">
+            <item
+                android:id="@+id/home"
+                android:icon="@drawable/home"
+                android:title="@string/home"
+                />
+
+            <item
+                android:id="@+id/news"
+                android:icon="@drawable/news"
+                android:title="@string/news"
+                />
+            <item
+                android:id="@+id/nadchodzace_zawody"
+                android:icon="@drawable/nadchodzace"
+                android:title="@string/nadchodzace_zawody"
+                />
+
+
+        </group>
+
+
+        <group android:checkableBehavior="single"
+                android:id="@+id/group2">
+
+                <item
+                    android:id="@+id/wyniki"
+                    android:icon="@drawable/wyniki"
+                    android:title="@string/wyniki" />
+                <item
+                    android:id="@+id/zaklady"
+                    android:icon="@drawable/zaklady"
+                    android:title="@string/zaklady" />
+                <item
+                    android:id="@+id/mecze"
+                    android:icon="@drawable/tv"
+                    android:title="@string/mecze" />
+
+
+
+            </group>
+
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group3">
+
+
+
         <item
             android:id="@+id/zespoly"
+            android:icon="@drawable/zespoly"
             android:title="@string/zespoly" />
+
+
         <item
-            android:id="@+id/mecze"
-            android:title="@string/mecze" />
+            android:id="@+id/zawodnicy"
+            android:icon="@drawable/zawodnicy"
+            android:title="@string/zawodnicy" />
+
+
+
+    </group>
+
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group4">
+
+
+
+
+
+
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/setting"
+            android:title="@string/setting"
+            />
+
+
+        <item
+            android:id="@+id/info"
+            android:icon="@drawable/info"
+            android:title="@string/info"
+            />
+
     </group>
 
     <!--<item android:title="Communicate">-->
