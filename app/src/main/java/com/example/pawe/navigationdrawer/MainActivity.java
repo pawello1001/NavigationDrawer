@@ -1,5 +1,6 @@
 package com.example.pawe.navigationdrawer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -86,9 +87,43 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.commit();
 
 
-        } else if (id == R.id.zawodnicy) {
+        } else if (id == R.id.info) {
 
-        } else if (id == R.id.zespoly) {
+           InfoActivity infoActivity = new InfoActivity();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, infoActivity);
+            fragmentTransaction.commit();
+
+
+        }
+
+        else if (id == R.id.zawodnicy) {
+
+
+
+        }
+
+        else if (id == R.id.news) {
+            NewsFragment newsfragment = new NewsFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, newsfragment);
+            fragmentTransaction.commit();
+
+        }
+
+        else if (id == R.id.setting) {
+
+            OptionsActivity opcjeFragment = new OptionsActivity();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, opcjeFragment);
+            fragmentTransaction.commit();
+
+        }
+
+
+        else if (id == R.id.zespoly) {
             ZespolyFragment zespolyFragment = new ZespolyFragment();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, zespolyFragment);

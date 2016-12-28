@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".WynikiStatsActivity"
             android:theme="@style/AppTheme.WynikiPopUpTransparent"></activity>
+        <activity android:name=".NewsActivity"
+            android:theme="@style/AppTheme.NewsPopUpTransparent"></activity>
         <activity android:name=".NadchodzaceZawodyActivity"
             android:theme="@style/AppTheme.ZawodyPopUpTransparent"></activity>
         <activity android:name=".MeczeTVActivity"

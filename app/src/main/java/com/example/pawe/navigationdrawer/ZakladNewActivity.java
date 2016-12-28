@@ -32,7 +32,7 @@ public class ZakladNewActivity extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int) (width * 0.8), (int) (height * 0.8));
+        getWindow().setLayout((int) (width), (int) (height));
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             position = extras.getInt("counter");

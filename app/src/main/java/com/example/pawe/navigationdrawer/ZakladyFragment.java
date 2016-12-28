@@ -3,6 +3,7 @@ package com.example.pawe.navigationdrawer;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -54,6 +55,17 @@ public class ZakladyFragment extends Fragment {
         scores.add(new ZakladyItem(R.drawable.napoli, clubs[14], "0", "0", clubs[15], R.drawable.roma));
         scores.add(new ZakladyItem(R.drawable.monaco, clubs[16], "2", "1", clubs[17], R.drawable.bordeaux));
         scores.add(new ZakladyItem(R.drawable.sevilla, clubs[18], "1", "3", clubs[19], R.drawable.liverpool));
+
+           FloatingActionButton butt = (FloatingActionButton) rootView.findViewById(R.id.plus_button);
+            butt.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+
+                                            Intent intent = new Intent(getContext(), ZakladNewActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    });
+
 
         ZakladyListAdapter adapter = new ZakladyListAdapter(this.getActivity(), scores);
         listView = (ListView) rootView.findViewById(R.id.resultListView);
