@@ -13,11 +13,11 @@ import java.util.Random;
  * Created by Kamil_2 on 2016-12-28.
  */
 
-public class NewsActivity extends AppCompatActivity{
+public class ZawodnicyActivity extends AppCompatActivity{
 
     int position = 0;
-    ImageView newsImage;
-    TextView newsName, newsDate;
+    ImageView playerImage;
+    TextView playerName, playerClub;
     TextView description;
     Random r,r2;
     int i=0;
@@ -25,7 +25,7 @@ public class NewsActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.news_activity);
+        setContentView(R.layout.zawodnicy_activity);
 
         //  getActionBar().setTitle("New");
 
@@ -44,10 +44,10 @@ public class NewsActivity extends AppCompatActivity{
         }
 
         System.out.println(position + "lololo");
-        NewsFragment wf = new NewsFragment();
-        List<NewsItem> list = wf.getScores();
+        ZawodnicyFragment wf = new ZawodnicyFragment();
+        List<ZawodnicyItem> list = wf.getScores();
 
-        NewsItem newsItem = list.get(position);
+        ZawodnicyItem zawodnicyItem = list.get(position);
 
         String[] desc = {
                 "Łukasz Teodorczyk z przytupem zakończył bardzo udany rok, bo w poniedziałek poprowadził Anderlecht do zwycięstwa z Charleroi (2:0). 25-letni Polak najpierw zdobył bramkę, która dała Fiołkom prowadzenie 1:0, a potem zaliczył asystę przy golu Franka Acheamponga.- Mieliśmy \"jaja\", by zaatakować Anderlecht wysokim pressingiem. Wystarczyło tylko odciąć Teodorczyka od podań, ale jeśli on ma choć jedną sytuację, to ją wykorzysta. To wielki napastnik. Tak naprawdę nie przegraliśmy z Anderlechtem - przegraliśmy z Teodorczykiem - stwierdził trener Charleroi, Felice Mazzu.",
@@ -77,14 +77,14 @@ public class NewsActivity extends AppCompatActivity{
         };
 
 
-        newsImage = (ImageView) findViewById(R.id.newsimg);
-        newsName = (TextView) findViewById(R.id.newstitle);
-        newsDate = (TextView) findViewById(R.id.newsDate);
-        description = (TextView) findViewById(R.id.newsdesc);
+        playerImage = (ImageView) findViewById(R.id.playerimg);
+        playerName = (TextView) findViewById(R.id.playername);
+        playerClub = (TextView) findViewById(R.id.playerclub);
+        description = (TextView) findViewById(R.id.playerdesc);
 
-        newsImage.setImageResource(newsItem.newsImage);
-        newsName.setText(newsItem.newsTitle);
-        newsDate.setText(newsItem.newsDate);
+        playerImage.setImageResource(zawodnicyItem.playerImage);
+        playerName.setText(zawodnicyItem.playerName);
+        playerClub.setText(zawodnicyItem.playerClub);
 
 
         r = new Random();

@@ -25,13 +25,13 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // NadchodzaceZawodyFragment nadchodzaceZawodyFragment = new NadchodzaceZawodyFragment();
+        StartActivity startFragment = new StartActivity();
 
 
-      //  android.support.v4.app.FragmentTransaction fragmentTransaction =
-        //        getSupportFragmentManager().beginTransaction();
-     //   fragmentTransaction.replace(R.id.fragment_container, nadchodzaceZawodyFragment);
-      //  fragmentTransaction.commit();
+        android.support.v4.app.FragmentTransaction fragmentTransaction =
+                getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, startFragment);
+        fragmentTransaction.commit();
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -100,6 +100,20 @@ public class MainActivity extends AppCompatActivity
 
         else if (id == R.id.zawodnicy) {
 
+            ZawodnicyFragment zawodnicyActivity = new ZawodnicyFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, zawodnicyActivity);
+            fragmentTransaction.commit();
+
+        }
+
+        else if (id == R.id.home) {
+          StartActivity startActivity = new StartActivity();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, startActivity);
+            fragmentTransaction.commit();
 
 
         }

@@ -30,6 +30,8 @@
             android:theme="@style/AppTheme.ZakladyPopUpTransparent"></activity>
         <activity android:name=".ZakladNewActivity"
             android:theme="@style/AppTheme.ZakladNewPopUpTransparent"></activity>
+        <activity android:name=".ZawodnicyActivity"
+            android:theme="@style/AppTheme.ZawodnicyPopUpTransparent"></activity>
     </application>
 
     <supports-screens android:resizeable="true"
