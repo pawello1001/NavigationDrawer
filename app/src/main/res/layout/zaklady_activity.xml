@@ -54,7 +54,7 @@
 
     <TableLayout
         android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
@@ -64,7 +64,8 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorYellow">
+            android:background="@color/colorYellow"
+            android:layout_marginBottom="1dp">
             <TextView android:id="@+id/data"
                 android:layout_gravity="center"
                 android:textSize="20dp"
@@ -74,7 +75,8 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorYellow">
+            android:background="@color/colorYellow"
+            android:layout_marginBottom="1dp">
             <TextView android:id="@+id/godzina"
                 android:layout_gravity="center"
                 android:textSize="20dp"
@@ -84,7 +86,8 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorYellow">
+            android:background="@color/colorYellow"
+            android:layout_marginBottom="1dp">
             <TextView android:id="@+id/kraj"
                 android:layout_gravity="center"
                 android:textSize="20dp"
@@ -94,7 +97,8 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorYellow">
+            android:background="@color/colorYellow"
+            android:layout_marginBottom="1dp">
             <TextView android:id="@+id/miasto"
                 android:layout_gravity="center"
                 android:textSize="20dp"
@@ -112,5 +116,15 @@
         </TableRow>
 
     </TableLayout>
+
+    <Button
+        android:text="Powrót"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="43dp"
+        android:id="@+id/button77"
+        android:background="@color/colorYellow" />
 
 </RelativeLayout>

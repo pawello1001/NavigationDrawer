@@ -29,11 +29,11 @@ public class WynikiFragment extends Fragment {
     List<WynikiItem> scores = new ArrayList<WynikiItem>();
     String[] clubs = {
             " Barcelona ", " Real Madrid ", " Arsenal FC ",
-            " Bayern Munich ", " Everton FC ", " Tottenham FC ",
-            " Chelsea FC ", " PSG ", " Leicester FC ",
-            " Inter Mediolan ", " Man United ", " Man City ",
-            " AC Milan ", " Juventus Turyn ", " SSC Napoli ",
-            " Roma FC ", " FC Monaco ", " Bordeaux FC ",
+            " Bayern ", " Everton FC ", " Tottenham FC ",
+            " Chelsea ", " PSG ", " Leicester ",
+            " Inter Med. ", " Man United ", " Man City ",
+            " AC Milan ", " Juventus ", " SSC Napoli ",
+            " Roma FC ", " FC Monaco ", " Bordeaux ",
             " Sevilla FC ", " Liverpool FC "
     };
 

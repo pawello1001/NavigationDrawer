@@ -3,6 +3,8 @@ package com.example.pawe.navigationdrawer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -69,6 +71,18 @@ public class NadchodzaceZawodyActivity extends AppCompatActivity {
         guestImage.setImageResource(wynikiItem.guestImage);
         hostName.setText(wynikiItem.host);
         guestName.setText(wynikiItem.guest);
+
+        Button butts = (Button) findViewById(R.id.button44);
+
+        butts.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View arg0) {
+
+                finish();
+            }
+
+        });
 
         posiadanie = (TextView) findViewById(R.id.data);
         strzaly = (TextView) findViewById(R.id.godzina);

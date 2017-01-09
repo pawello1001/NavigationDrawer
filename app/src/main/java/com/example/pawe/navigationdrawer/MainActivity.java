@@ -130,9 +130,11 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.setting) {
 
             OptionsActivity opcjeFragment = new OptionsActivity();
-            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+           FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, opcjeFragment);
             fragmentTransaction.commit();
+
+
 
         }
 

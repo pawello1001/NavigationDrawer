@@ -33,6 +33,7 @@ public class MeczeTVListAdapter  extends ArrayAdapter<MeczeTVItem> {
         ImageView guestImage = (ImageView) rowView.findViewById(R.id.nadchodzaceZawodyGuestImage);
         TextView hostName = (TextView) rowView.findViewById(R.id.wynikiHost);
         TextView guestName = (TextView) rowView.findViewById(R.id.wynikiGuest);
+        TextView canal = (TextView) rowView.findViewById(R.id.nazwaKanalu);
 
 
 
@@ -40,6 +41,7 @@ public class MeczeTVListAdapter  extends ArrayAdapter<MeczeTVItem> {
         guestImage.setImageResource(scores.get(position).guestImage);
         hostName.setText(scores.get(position).host);
         guestName.setText(scores.get(position).guest);
+        canal.setText(scores.get(position).canal);
 
         return rowView;
     }

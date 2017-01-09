@@ -29,10 +29,10 @@ public class NadchodzaceZawodyFragment extends Fragment {
     List<NadchodzaceZawodyItem> incomings = new ArrayList<NadchodzaceZawodyItem>();
     String[] clubs = {
             " Barcelona ", " Real Madrid ", " Arsenal FC ",
-            " Bayern Munich ", " Everton FC ", " Tottenham FC ",
+            " Bayern  ", " Everton FC ", " Tottenham FC ",
             " Chelsea FC ", " PSG ", " Leicester FC ",
-            " Inter Mediolan ", " Man United ", " Man City ",
-            " AC Milan ", " Juventus Turyn ", " SSC Napoli ",
+            " Inter Med. ", " Man United ", " Man City ",
+            " AC Milan ", " Juventus  ", " SSC Napoli ",
             " Roma FC ", " FC Monaco ", " Bordeaux FC ",
             " Sevilla FC ", " Liverpool FC "
     };
@@ -54,6 +54,8 @@ public class NadchodzaceZawodyFragment extends Fragment {
         incomings.add(new NadchodzaceZawodyItem(R.drawable.roma, clubs[15], new Date(117,1,4), false, clubs[16], R.drawable.monaco));
         incomings.add(new NadchodzaceZawodyItem(R.drawable.bayern_munchen, clubs[3], new Date(117,1,5), true, clubs[6], R.drawable.chelsea));
         incomings.add(new NadchodzaceZawodyItem(R.drawable.liverpool, clubs[19], new Date(117,1,5), false, clubs[14], R.drawable.napoli));
+
+
 
         NadchodzaceZawodyListAdapter adapter = new NadchodzaceZawodyListAdapter(this.getActivity(), incomings);
         listView = (ListView) rootView.findViewById(R.id.incomingListView);

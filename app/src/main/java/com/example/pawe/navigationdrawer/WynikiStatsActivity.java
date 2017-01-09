@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -44,6 +45,19 @@ public class WynikiStatsActivity extends AppCompatActivity {
         List<WynikiItem> list = wf.getScores();
 
         WynikiItem wynikiItem = list.get(position);
+
+        Button butts = (Button) findViewById(R.id.button66);
+
+        butts.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View arg0) {
+
+                finish();
+            }
+
+        });
+
 
         hostImage = (ImageView) findViewById(R.id.wynikiStatsHostImageView);
         guestImage = (ImageView) findViewById(R.id.wynikiStatsGuestImageView);

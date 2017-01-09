@@ -3,6 +3,8 @@ package com.example.pawe.navigationdrawer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -52,7 +54,7 @@ public class NewsActivity extends AppCompatActivity{
         String[] desc = {
                 "Łukasz Teodorczyk z przytupem zakończył bardzo udany rok, bo w poniedziałek poprowadził Anderlecht do zwycięstwa z Charleroi (2:0). 25-letni Polak najpierw zdobył bramkę, która dała Fiołkom prowadzenie 1:0, a potem zaliczył asystę przy golu Franka Acheamponga.- Mieliśmy \"jaja\", by zaatakować Anderlecht wysokim pressingiem. Wystarczyło tylko odciąć Teodorczyka od podań, ale jeśli on ma choć jedną sytuację, to ją wykorzysta. To wielki napastnik. Tak naprawdę nie przegraliśmy z Anderlechtem - przegraliśmy z Teodorczykiem - stwierdził trener Charleroi, Felice Mazzu.",
                 "W trwającej dekadzie, począwszy od stycznia 2011 roku, kluby, które dziś występują w Lotto Ekstraklasie, sprzedały za granicę tylko 65 zawodników, zarabiając na tym ok. 75 mln euro. \"Tylko\", ponieważ pod uwagę bierzemy aż 12 okien transferowych, co oznacza, że co pół roku zagraniczne kluby kupują w Polsce raptem pięciu zawodników.\n" +
-                        "Lwia część tych wpływów pochodzi z transakcji przeprowadzonych w letnim oknie transferowym. W lipcu i sierpniu za gotówkę z Polski wyjechało ośmiu zawodników, na sprzedaży których kluby Lotto Ekstraklasy zarobiły ok. 18 mln euro. Pod tym względem było to rekordowe okno transferowe. Dla porównania, ze słowackiej ekstraklasy za gotówkę - łącznie 5,2 mln euro - odeszło latem tylko dwóch zawodników, a kluby czeskiej ekstraklasy wyeksportowały dziewięciu piłkarzy za 14,6 mln euro.",
+                        "Lwia część tych wpływów pochodzi z transakcji przeprowadzonych w letnim oknie transferowym. W lipcu i sierpniu za gotówkę z Polski wyjechało ośmiu zawodników, na sprzedaży których kluby Lotto Ekstraklasy zarobiły ok. 18 mln euro. Pod tym względem było to rekordowe okno transferowe.",
                 "W pierwszym meczu III rundy el. Ligi Mistrzów 2013/2014 Legia zremisowała z ówczesnym mistrzem Norwegii 1:1, a gola dla niego strzelił właśnie Daniel Chima Chukwu.\n" +
                         "W 2015 roku Nigeryjczyk opuścił Molde na rzecz Shanghai Shenxin. W sezonie 2015 chińskiej ekstraklasy strzelił dziesięć goli i zaliczył osiem asyst w 27 występach, ale jego zespół spadł do II ligi. Na zapleczu Super League Chukwu radził sobie jeszcze lepiej, bo w 22 meczach zdobył 11 bramek.",
                 "Po odjęciu przez Komisję Licencyjną PZPN czterech punktów sytuacja Ruchu Chorzów w tabeli Lotto Ekstraklasy zrobiła się trudna. Działacze klubu z Cichej są świadomi, że bez wzmocnień drużyna może mieć problemy z utrzymaniem.\n" +
@@ -69,7 +71,7 @@ public class NewsActivity extends AppCompatActivity{
                 "- Rzeczywiście rozważamy opcję z Sevilli, a przecież rozmawiamy o wielkim klubie. Sevilla jest na dobrej pozycji w lidze hiszpańskiej i ma wspaniałego szkoleniowca. W tym momencie nie mogę powiedzieć nic więcej - przyznał Philippe Lamboley.\n" +
                         "Anthony Martial nie jest ulubieńcem Jose Mourinho. Francuz gra dużo słabiej niż w poprzednim sezonie, a na dodatek rozzłościła go decyzja zaraz po transferze Zlatana Ibrahimovicia. Martial bowiem stracił numer \"dziewięć\" na koszulce i nikt mu nawet nie powiedział, że tak się stanie.",
                 "Legia wykupi Artura Jędrzejczyka z FK Krasnodar za ok. milion euro, a sprowadzenie go na Łazienkowską 3 będzie olbrzymim wzmocnieniem ekipy Jacka Magiery. W pierwszej połowie 2017 roku reprezentant kraju przyda się Legii jednak tylko w walce o obronę mistrzostwa Polski.\n" +
-                        "W meczach 1/16 finału Ligi Europy z Ajaksem Amsterdam Jędrzejczyk nie będzie mógł zagrać, ponieważ wystąpił już w tych rozgrywkach w barwach FK Krasnodar. Jesienią \"Jędza\" zagrał w pięciu meczach fazy grupowej Ligi Europy, a przepisy UEFA stanowią, że w trakcie jednego sezonu zawodnik nie może występować w Lidze Mistrzów bądź Lidze Europy w barwach więcej niż jednego klubu. Mówi o tym dokładnie art 41.07 regulaminu rozgrywek Ligi Europy 2016/2017.",
+                        "W meczach 1/16 finału Ligi Europy z Ajaksem Amsterdam Jędrzejczyk nie będzie mógł zagrać, ponieważ wystąpił już w tych rozgrywkach w barwach FK Krasnodar.",
                 "Legii Magiery też się takie wypadki zdarzają jak remis u siebie z Wisłą Płock, drużynę z Łazienkowskiej to jedynie nakręca do jeszcze bardziej wytężonej pracy, do jeszcze większej mobilizacji, do jeszcze większej koncentracji.\n" +
                         "Rozmawiałem z legionistami po tym remisie z Wisłą Płock i widziałem ludzi zirytowanych tym, że wyszli na frajerów wypuszczając dwubramkowe prowadzenie. Jakby im pozwolić, wskoczyliby raz jeszcze w krótkie spodenki i chcieli od razu grać rewanż. Żeby się natychmiast odegrać, żeby pokazać, że to był jedynie wypadek przy pracy.",
                 "- Oni mają na tyle duży potencjał, że kiedyś mogą stanowić o sile Lecha i właśnie teraz trzeba im zapewnić odpowiedni rozwój. Wiadomo, że 17- czy 18-latek czasem nie jest w stanie wygrać rywalizacji ze starszym kolegą - przyznał w rozmowie z WP SportoweFakty prezes Kolejorza, Karol Klimczak.\n" +
@@ -85,6 +87,19 @@ public class NewsActivity extends AppCompatActivity{
         newsImage.setImageResource(newsItem.newsImage);
         newsName.setText(newsItem.newsTitle);
         newsDate.setText(newsItem.newsDate);
+
+
+        Button butt1 = (Button) findViewById(R.id.button33);
+
+        butt1.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View arg0) {
+
+                finish();
+            }
+
+        });
 
 
         r = new Random();

@@ -11,13 +11,15 @@ public class MeczeTVItem {
     String guest;
     String hostScore;
     String guestScore;
+    String canal;
 
-    public MeczeTVItem(Integer hostImage, String host, String hostScore, String guestScore, String guest, Integer guestImage) {
+    public MeczeTVItem(Integer hostImage, String host, String hostScore, String guestScore, String guest, String canal, Integer guestImage) {
         this.hostImage = hostImage;
         this.host = host;
         this.hostScore = hostScore;
         this.guestScore = guestScore;
         this.guest = guest;
+        this.canal = canal;
         this.guestImage = guestImage;
     }
 }

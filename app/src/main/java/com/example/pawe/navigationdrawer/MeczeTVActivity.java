@@ -5,6 +5,8 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -71,7 +73,18 @@ public class MeczeTVActivity extends AppCompatActivity {
         guestName = (TextView) findViewById(R.id.wynikiStatsGuestName);
 
 
+        Button butts = (Button) findViewById(R.id.button55);
 
+
+        butts.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View arg0) {
+
+                finish();
+            }
+
+        });
 
         hostImage.setImageResource(wynikiItem.hostImage);
         guestImage.setImageResource(wynikiItem.guestImage);
@@ -90,7 +103,7 @@ public class MeczeTVActivity extends AppCompatActivity {
         r2 = new Random();
         int y = r2.nextInt(11);
         int x = r.nextInt(100);
-        posiadanie.setText("MECZEtv: "+ r.nextInt(30)+"-01-2017");
+        posiadanie.setText("DATA: "+ r.nextInt(30)+"-01-2017");
         strzaly.setText("GODZINA: "+ r.nextInt(23) +":" + r.nextInt(60));
         strzalyCelne.setText(kraj[y]);
         faule.setText(miasto[y]);

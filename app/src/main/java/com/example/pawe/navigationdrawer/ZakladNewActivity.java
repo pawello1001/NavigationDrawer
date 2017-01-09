@@ -1,12 +1,11 @@
 package com.example.pawe.navigationdrawer;
 
-import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -45,22 +44,55 @@ public class ZakladNewActivity extends AppCompatActivity {
 
         String[] clubs = {
                 " Barcelona ", " Real Madrid ", " Arsenal FC ",
-                " Bayern Munich ", " Everton FC ", " Tottenham FC ",
-                " Chelsea FC ", " PSG ", " Leicester FC ",
-                " Inter Mediolan ", " Man United ", " Man City ",
-                " AC Milan ", " Juventus Turyn ", " SSC Napoli ",
-                " Roma FC ", " FC Monaco ", " Bordeaux FC ",
+                " Bayern ", " Everton FC ", " Tottenham FC ",
+                " Chelsea ", " PSG ", " Leicester ",
+                " Inter Med. ", " Man United ", " Man City ",
+                " AC Milan ", " Juventus ", " SSC Napoli ",
+                " Roma FC ", " FC Monaco ", " Bordeaux ",
                 " Sevilla FC ", " Liverpool FC "
         };
 
+
+        String[] score = {" 0 ",
+                " 1 ", " 2 ", " 3 ",
+                " 4 ", " 5 ", " 6 ",
+                " 7 ", " 8 ", " 9 ",
+                " 10 ", " 11 ", " 12 ",
+        };
 
 
         hostName = (TextView) findViewById(R.id.textView);
         guestName = (TextView) findViewById(R.id.textView2);
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
+        Spinner spinner3 = (Spinner) findViewById(R.id.spinner3);
+        Spinner spinner4 = (Spinner) findViewById(R.id.spinner4);
+        Button button1 = (Button) findViewById(R.id.button11);
+        Button button2 = (Button) findViewById(R.id.button22);
+
+        button1.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View arg0) {
+
+                finish();
+            }
+
+        });
+
+        button2.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View arg0) {
+
+                finish();
+            }
+
+        });
 
         List<String> druzyna1 = new ArrayList<String>();
+
+        List<String> wynik = new ArrayList<String>();
 
         int i=0;
 
@@ -71,12 +103,34 @@ public class ZakladNewActivity extends AppCompatActivity {
              ++i;
         }
 
+        int j=0;
+
+        for(String e:score)
+        {
+            wynik.add(score[j]);
+
+            j++;
+        }
+
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, druzyna1);
+
+        ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, wynik);
+
+
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
         spinner.setAdapter(dataAdapter);
 
         spinner2.setAdapter(dataAdapter);
+
+        spinner3.setAdapter(dataAdapter2);
+
+        spinner4.setAdapter(dataAdapter2);
         
 
     }

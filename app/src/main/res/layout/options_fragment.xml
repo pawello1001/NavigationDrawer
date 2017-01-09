@@ -1,39 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:layout_marginTop="?attr/actionBarSize"
     android:weightSum="1">
 
-    <TextView
-        android:text="witaj w opcjach"
-        android:layout_width="wrap_content"
+    <Switch
+        android:text="Automatyczne aktualizacje"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
-        android:layout_alignRight="@+id/textView4"
-        android:layout_alignEnd="@+id/textView4"
-        android:layout_marginTop="33dp"
-        android:id="@+id/textView5" />
-
-    <TextView
-        android:text="Wersja 1.4"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/infoIcon"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/switch1"
+        android:padding="10dp"
+        android:layout_marginBottom="1dp"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_width="wrap_content" />
+        android:textSize="18sp"
+        android:background="@android:color/white"
+        android:trackTint="@color/colorPrimary" />
 
-    <ImageView
-        android:layout_width="182dp"
-        android:layout_height="168dp"
-        android:layout_gravity="center"
-        app:srcCompat="@drawable/ball"
-        android:id="@+id/infoIcon"
-        tools:ignore="ContentDescription"
-        android:layout_marginTop="83dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-</RelativeLayout>
+    <Switch
+        android:text="Pobieranie danych w tle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch3"
+        android:padding="10dp"
+        android:layout_marginBottom="1dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:background="@android:color/white"
+        android:trackTint="@color/colorPrimary" />
+
+    <Switch
+        android:text="Powiadomienia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch2"
+        android:padding="10dp"
+        android:layout_marginBottom="1dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:background="@android:color/white"
+        android:trackTint="@color/colorPrimary" />
+
+    <Switch
+        android:text="Dostęp do kalendarza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch4"
+        android:padding="10dp"
+        android:layout_marginBottom="1dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:background="@android:color/white"
+        android:trackTint="@color/colorPrimary" />
+
+</LinearLayout>
