@@ -34,10 +34,10 @@ public class NadchodzaceZawodyActivity extends AppCompatActivity {
         if (extras != null) {
             position = extras.getInt("counter");
         }
-        WynikiFragment wf = new WynikiFragment();
-        List<WynikiItem> list = wf.getScores();
+        NadchodzaceZawodyFragment wf = new NadchodzaceZawodyFragment();
+        List<NadchodzaceZawodyItem> list = wf.getIncomings();
 
-        WynikiItem wynikiItem = list.get(position);
+        NadchodzaceZawodyItem wynikiItem = list.get(position);
 
         String[] kraj = {
                 " Indie ", " Meksyk ", " Hiszpania ",

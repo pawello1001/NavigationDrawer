@@ -50,17 +50,17 @@ public class ZawodnicyFragment extends Fragment {
 
         // getActionBar().setTitle("OMG");
 
-        players.add(new ZawodnicyItem(R.drawable.news1, playersnames[0], "FC Barcelona"));
-        players.add(new ZawodnicyItem(R.drawable.news2, playersnames[1], "FC Barcelona"));
-        players.add(new ZawodnicyItem(R.drawable.news3, playersnames[2], "FC Barcelona"));
-        players.add(new ZawodnicyItem(R.drawable.news4, playersnames[3], "Bayern Monachium"));
-        players.add(new ZawodnicyItem(R.drawable.news5, playersnames[4], "Bayern Monachium"));
-        players.add(new ZawodnicyItem(R.drawable.news6, playersnames[5], "Manchester United"));
-        players.add(new ZawodnicyItem(R.drawable.news7, playersnames[6], "Bayern Monachium"));
-        players.add(new ZawodnicyItem(R.drawable.news8, playersnames[7], "Manchester City"));
-        players.add(new ZawodnicyItem(R.drawable.news9, playersnames[8], "Arsenal Londyn"));
-        players.add(new ZawodnicyItem(R.drawable.news10, playersnames[9], "Manchester United"));
-        players.add(new ZawodnicyItem(R.drawable.news11, playersnames[10], "FC Barcelona"));
+        players.add(new ZawodnicyItem(R.drawable.lionel, playersnames[0], "FC Barcelona"));
+        players.add(new ZawodnicyItem(R.drawable.neymar, playersnames[1], "FC Barcelona"));
+        players.add(new ZawodnicyItem(R.drawable.luis, playersnames[2], "FC Barcelona"));
+        players.add(new ZawodnicyItem(R.drawable.robert, playersnames[3], "Bayern Monachium"));
+        players.add(new ZawodnicyItem(R.drawable.thomas, playersnames[4], "Bayern Monachium"));
+        players.add(new ZawodnicyItem(R.drawable.zlatan, playersnames[5], "Manchester United"));
+        players.add(new ZawodnicyItem(R.drawable.manuel, playersnames[6], "Bayern Monachium"));
+        players.add(new ZawodnicyItem(R.drawable.sergio, playersnames[7], "Manchester City"));
+        players.add(new ZawodnicyItem(R.drawable.alexis, playersnames[8], "Arsenal Londyn"));
+        players.add(new ZawodnicyItem(R.drawable.pogba, playersnames[9], "Manchester United"));
+        players.add(new ZawodnicyItem(R.drawable.iniesta, playersnames[10], "FC Barcelona"));
 
         ZawodnicyListAdapter adapter = new ZawodnicyListAdapter(this.getActivity(), players);
         listView = (ListView) rootView.findViewById(R.id.playerListView);
@@ -79,17 +79,17 @@ public class ZawodnicyFragment extends Fragment {
 
     public List<ZawodnicyItem> getScores() {
        players.clear();
-        players.add(new ZawodnicyItem(R.drawable.news1, playersnames[0], "FC Barcelona"));
-        players.add(new ZawodnicyItem(R.drawable.news2, playersnames[1], "FC Barcelona"));
-        players.add(new ZawodnicyItem(R.drawable.news3, playersnames[2], "FC Barcelona"));
-        players.add(new ZawodnicyItem(R.drawable.news4, playersnames[3], "Bayern Monachium"));
-        players.add(new ZawodnicyItem(R.drawable.news5, playersnames[4], "Bayern Monachium"));
-        players.add(new ZawodnicyItem(R.drawable.news6, playersnames[5], "Manchester United"));
-        players.add(new ZawodnicyItem(R.drawable.news7, playersnames[6], "Bayern Monachium"));
-        players.add(new ZawodnicyItem(R.drawable.news8, playersnames[7], "Manchester City"));
-        players.add(new ZawodnicyItem(R.drawable.news9, playersnames[8], "Arsenal Londyn"));
-        players.add(new ZawodnicyItem(R.drawable.news10, playersnames[9], "Manchester United"));
-        players.add(new ZawodnicyItem(R.drawable.news11, playersnames[10], "FC Barcelona"));
+        players.add(new ZawodnicyItem(R.drawable.lionel, playersnames[0], "FC Barcelona"));
+        players.add(new ZawodnicyItem(R.drawable.neymar, playersnames[1], "FC Barcelona"));
+        players.add(new ZawodnicyItem(R.drawable.luis, playersnames[2], "FC Barcelona"));
+        players.add(new ZawodnicyItem(R.drawable.robert, playersnames[3], "Bayern Monachium"));
+        players.add(new ZawodnicyItem(R.drawable.thomas, playersnames[4], "Bayern Monachium"));
+        players.add(new ZawodnicyItem(R.drawable.zlatan, playersnames[5], "Manchester United"));
+        players.add(new ZawodnicyItem(R.drawable.manuel, playersnames[6], "Bayern Monachium"));
+        players.add(new ZawodnicyItem(R.drawable.sergio, playersnames[7], "Manchester City"));
+        players.add(new ZawodnicyItem(R.drawable.alexis, playersnames[8], "Arsenal Londyn"));
+        players.add(new ZawodnicyItem(R.drawable.pogba, playersnames[9], "Manchester United"));
+        players.add(new ZawodnicyItem(R.drawable.iniesta, playersnames[10], "FC Barcelona"));
         return players;
     }
 }

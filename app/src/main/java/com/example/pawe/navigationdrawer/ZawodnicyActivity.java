@@ -3,6 +3,8 @@ package com.example.pawe.navigationdrawer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,7 +22,7 @@ public class ZawodnicyActivity extends AppCompatActivity{
     TextView playerName, playerClub;
     TextView description;
     Random r,r2;
-    int i=0;
+    static int i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,37 +45,35 @@ public class ZawodnicyActivity extends AppCompatActivity{
             position = extras.getInt("counter");
         }
 
+        Button buuts = (Button) findViewById(R.id.button99);
+
+        buuts.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View arg0) {
+
+                finish();
+            }
+
+        });
+
         System.out.println(position + "lololo");
         ZawodnicyFragment wf = new ZawodnicyFragment();
         List<ZawodnicyItem> list = wf.getScores();
 
         ZawodnicyItem zawodnicyItem = list.get(position);
 
-        String[] desc = {
-                "Łukasz Teodorczyk z przytupem zakończył bardzo udany rok, bo w poniedziałek poprowadził Anderlecht do zwycięstwa z Charleroi (2:0). 25-letni Polak najpierw zdobył bramkę, która dała Fiołkom prowadzenie 1:0, a potem zaliczył asystę przy golu Franka Acheamponga.- Mieliśmy \"jaja\", by zaatakować Anderlecht wysokim pressingiem. Wystarczyło tylko odciąć Teodorczyka od podań, ale jeśli on ma choć jedną sytuację, to ją wykorzysta. To wielki napastnik. Tak naprawdę nie przegraliśmy z Anderlechtem - przegraliśmy z Teodorczykiem - stwierdził trener Charleroi, Felice Mazzu.",
-                "W trwającej dekadzie, począwszy od stycznia 2011 roku, kluby, które dziś występują w Lotto Ekstraklasie, sprzedały za granicę tylko 65 zawodników, zarabiając na tym ok. 75 mln euro. \"Tylko\", ponieważ pod uwagę bierzemy aż 12 okien transferowych, co oznacza, że co pół roku zagraniczne kluby kupują w Polsce raptem pięciu zawodników.\n" +
-                        "Lwia część tych wpływów pochodzi z transakcji przeprowadzonych w letnim oknie transferowym. W lipcu i sierpniu za gotówkę z Polski wyjechało ośmiu zawodników, na sprzedaży których kluby Lotto Ekstraklasy zarobiły ok. 18 mln euro. Pod tym względem było to rekordowe okno transferowe. Dla porównania, ze słowackiej ekstraklasy za gotówkę - łącznie 5,2 mln euro - odeszło latem tylko dwóch zawodników, a kluby czeskiej ekstraklasy wyeksportowały dziewięciu piłkarzy za 14,6 mln euro.",
-                "W pierwszym meczu III rundy el. Ligi Mistrzów 2013/2014 Legia zremisowała z ówczesnym mistrzem Norwegii 1:1, a gola dla niego strzelił właśnie Daniel Chima Chukwu.\n" +
-                        "W 2015 roku Nigeryjczyk opuścił Molde na rzecz Shanghai Shenxin. W sezonie 2015 chińskiej ekstraklasy strzelił dziesięć goli i zaliczył osiem asyst w 27 występach, ale jego zespół spadł do II ligi. Na zapleczu Super League Chukwu radził sobie jeszcze lepiej, bo w 22 meczach zdobył 11 bramek.",
-                "Po odjęciu przez Komisję Licencyjną PZPN czterech punktów sytuacja Ruchu Chorzów w tabeli Lotto Ekstraklasy zrobiła się trudna. Działacze klubu z Cichej są świadomi, że bez wzmocnień drużyna może mieć problemy z utrzymaniem.\n" +
-                        "Klub prowadzi rozmowy z kilkoma zawodnikami, którzy mogliby znacząco wzmocnić zespół. Jednym z nich jest Stojan Vranjes. Pomocnik w grudniu rozwiązał umowę z Legią Warszawa, w której występował przez ostatnie półtora roku. Wcześniej w ekstraklasie bronił barw Lechii Gdańsk.",
-                "Grzegorz Krychowiak jest na celowniku Interu już od kilku miesięcy, ale latem mediolańczycy nie mogli wygrać z PSG bitwy o pozyskanie Polaka z Sevilli. 26-latek chciał wrócić do Francji, w której występował już w latach 2006-2014. Do tego do Parku Książąt sprowadził go Unai Emery, czyli jego szkoleniowiec z Sevilli, co miało ułatwić mu wejście do drużyny.\n" +
-                        "Tymczasem za Krychowiakiem rozczarowująca runda. Nie dość, że nie przebił się do \"11\" PSG, to jeszcze nie są mu przychylne francuskie media. \"L'Equipe\" na przykład wskazał go jako jeden z transferowych niewypałów. Reprezentant Polski zagrał w 16 z 27 spotkań PSG, ale od pierwszego gwizdka wystąpił tylko dziesięciokrotnie",
-                "Choć latem Leicester City znacząco nie osłabiło swojej kadry, runda jesienna jest fatalna dla mistrza Anglii. Po 18 kolejkach Lisy zajmują dopiero 16. miejsce w tabeli Premier League.\n" +
-                        "Premier League: Zaczęło się sensacyjnie, ale Liverpool rozbił Stoke i jest wiceliderem\n" +
-                        "Wiosną drużynę czeka walka o utrzymanie w najwyższej klasie rozgrywkowej w Anglii i w klubie zdają sobie sprawę, że zespół potrzebuje wzmocnień. Dlatego też zimą w Leicester zamierzają wydać poważne pieniądze na transfery.\n" +
-                        "Według \"Daily Telegraph\" Claudio Ranieri otrzyma 30 milionów funtów na nowych graczy. Na King Power Stadium ma trafić co najmniej trzech wysokiej klasy zawodników.",
-                "Młody Niemiec zbiera znakomite recenzje za swoją grę. Pomocnik Borussii Dortmund jest bacznie obserwowany przez wiele europejskich klubów. Według dziennika \"AS\", najbardziej zainteresowane 21-letnim Julianem Weiglem są FC Barcelona oraz Manchester City.\n" +
-                        "Philippe Coutinho zagra w FC Barcelona?\n" +
-                        "Włodarze Dumy Katalonii uważają, że pomocnik miałby być następcą Sergio Busquetsa. Weigl znajduje się na samym szczycie listy potencjalnych wzmocnień, a raporty skautów Blaugrany na jego temat są naprawdę rewelacyjne. Na przeszkodzie Barcelonie może stanąć jednak Pep Guardiola, który dysponuje w Anglii większymi możliwościami finansowymi.",
-                "- Rzeczywiście rozważamy opcję z Sevilli, a przecież rozmawiamy o wielkim klubie. Sevilla jest na dobrej pozycji w lidze hiszpańskiej i ma wspaniałego szkoleniowca. W tym momencie nie mogę powiedzieć nic więcej - przyznał Philippe Lamboley.\n" +
-                        "Anthony Martial nie jest ulubieńcem Jose Mourinho. Francuz gra dużo słabiej niż w poprzednim sezonie, a na dodatek rozzłościła go decyzja zaraz po transferze Zlatana Ibrahimovicia. Martial bowiem stracił numer \"dziewięć\" na koszulce i nikt mu nawet nie powiedział, że tak się stanie.",
-                "Legia wykupi Artura Jędrzejczyka z FK Krasnodar za ok. milion euro, a sprowadzenie go na Łazienkowską 3 będzie olbrzymim wzmocnieniem ekipy Jacka Magiery. W pierwszej połowie 2017 roku reprezentant kraju przyda się Legii jednak tylko w walce o obronę mistrzostwa Polski.\n" +
-                        "W meczach 1/16 finału Ligi Europy z Ajaksem Amsterdam Jędrzejczyk nie będzie mógł zagrać, ponieważ wystąpił już w tych rozgrywkach w barwach FK Krasnodar. Jesienią \"Jędza\" zagrał w pięciu meczach fazy grupowej Ligi Europy, a przepisy UEFA stanowią, że w trakcie jednego sezonu zawodnik nie może występować w Lidze Mistrzów bądź Lidze Europy w barwach więcej niż jednego klubu. Mówi o tym dokładnie art 41.07 regulaminu rozgrywek Ligi Europy 2016/2017.",
-                "Legii Magiery też się takie wypadki zdarzają jak remis u siebie z Wisłą Płock, drużynę z Łazienkowskiej to jedynie nakręca do jeszcze bardziej wytężonej pracy, do jeszcze większej mobilizacji, do jeszcze większej koncentracji.\n" +
-                        "Rozmawiałem z legionistami po tym remisie z Wisłą Płock i widziałem ludzi zirytowanych tym, że wyszli na frajerów wypuszczając dwubramkowe prowadzenie. Jakby im pozwolić, wskoczyliby raz jeszcze w krótkie spodenki i chcieli od razu grać rewanż. Żeby się natychmiast odegrać, żeby pokazać, że to był jedynie wypadek przy pracy.",
-                "- Oni mają na tyle duży potencjał, że kiedyś mogą stanowić o sile Lecha i właśnie teraz trzeba im zapewnić odpowiedni rozwój. Wiadomo, że 17- czy 18-latek czasem nie jest w stanie wygrać rywalizacji ze starszym kolegą - przyznał w rozmowie z WP SportoweFakty prezes Kolejorza, Karol Klimczak.\n" +
-                        "Dariusz Formella został wypożyczony do Arki Gdynia. Czy w przypadku pozostałej dwójki również są brane pod uwagę tylko drużyny z Lotto Ekstraklasy? - Chcemy im zapewnić kluby z niezłą infrastrukturą i trenerami, którzy potrafią pracować z młodzieżą. Wcale nie jest powiedziane, że zespoły, do których przeniosą się ci zawodnicy muszą być w ekstraklasie, albo się o nią bić. Nasi piłkarze mają po prostu zyskać możliwość podnoszenia swoich kwalifikacji - zaznaczył Klimczak."
+        String[] desc = {"Lionel Andrés Messi Cuccittini (hiszpańska wymowa [ljoˈnel anˈdɾes ˈmesi]; ur. 24 czerwca 1987 w Rosario) – argentyński piłkarz występujący na pozycji napastnika w hiszpańskim klubie FC Barcelona oraz w reprezentacji Argentyny, której jest kapitanem. Srebrny medalista Mistrzostw Świata 2014. Złoty medalista Igrzysk Olimpijskich 2008. Najskuteczniejszy zawodnik w historii FC Barcelony.",
+                "Neymar Jr swoją profesjonalną karierę zaczynał w Santosie. Od 2009 był podstawowym zawodnikiem pierwszej drużyny. Neymar w wieku 17 lat zadebiutował w meczu przeciwko Oeste 7 marca 2009 roku – Santos wygrał 2:1, kolejny mecz zagrał przeciwko Mogi Mirim tydzień później, podczas którego zdobył swoją pierwszą bramkę w pierwszej drużynie. Został uznany za najbardziej utalentowanego piłkarza z Ameryki Południowej[1]. W półfinale Campeonato Paulista 2009 w pierwszym meczu przeciwko Palmeiras na Estádio Vila Belmiro zdobył gola na wagę zwycięstwa[2].",
+                "Luis Alberto Suárez Díaz (wym. [ˈlwiz 'swares], ur. 24 stycznia 1987 w Salto) – urugwajski piłkarz występujący na pozycji napastnika w hiszpańskim klubie FC Barcelona oraz w reprezentacji Urugwaju. Złoty medalista Copa América 2011. Uczestnik Mistrzostw Świata 2010, 2014, Pucharu Konfederacji 2013 oraz Copa América 2016.Wychowanek Varsovii Warszawa. W swojej karierze reprezentował także barwy Delty Warszawa, Legii II Warszawa, Znicza Pruszków, Lecha Poznań oraz Borussii Dortmund.",
+                "Robert Lewandowski (ur. 21 sierpnia 1988 w Warszawie) – polski piłkarz występujący na pozycji napastnika w niemieckim klubie Bayern Monachium oraz w reprezentacji Polski, której jest kapitanem[2]. Członek Klubu Wybitnego Reprezentanta[3]. Uczestnik Mistrzostw Europy 2012 i 2016.",
+                "Thomas Müller (ur. 13 września 1989 w Weilheim in Oberbayern) – niemiecki piłkarz występujący na pozycji napastnika lub pomocnika w niemieckim klubie Bayern Monachium oraz w reprezentacji Niemiec. Złoty medalista Mistrzostw Świata 2014. Brązowy medalista Mistrzostw Świata 2010. Uczestnik Mistrzostw Europy 2012 i 2016.",
+                "Zlatan Ibrahimović (wym. ['zlatan ibra'xi:mɔʋitɕ]; ur. 3 października 1981 w Malmö) – szwedzki piłkarz pochodzenia bośniackiego i chorwackiego występujący na pozycji napastnika w angielskim klubie Manchester United. W latach 2001–2016 reprezentant Szwecji.",
+                "Manuel Peter Neuer (ur. 27 marca 1986 w Gelsenkirchen) – niemiecki piłkarz występujący na pozycji bramkarza w niemieckim klubie Bayern Monachium oraz w reprezentacji Niemiec, której jest kapitanem. Złoty medalista Mistrzostw Świata 2014, brązowy medalista Mistrzostw Świata 2010 oraz złoty medalista Mistrzostw Europy U-21 2009. Uczestnik Mistrzostw Europy 2012 i 2016.",
+                "Sergio Agüero urodził się 2 czerwca 1988 r. o godzinie 15:23, w Hospital Piñero w Buenos Aires. Jest drugim z siedmiorga dzieci Leonela del Castillo (ur. 07.08.1968 r.) i Adrianny Agüero (ur. 11.05.1970 r.). Dorastał w biednej, nieciekawej okolicy, pełnej narkomanów oraz dilerów. W jednym z wywiadów podkreślił radość z powodu opuszczenia swojego miejsca dorastania, ponieważ wielu jego znajomych uzależniło się od narkotyków, natomiast on dzięki swojej pasji mógł zmienić otoczenie i pomóc rodzinie wyjść z biedy.",
+                "Wychowanek Cobreloi, skąd latem 2006 roku trafił do Udinese. Pierwsze dwa lata spędził na wypożyczeniach w Colo-Colo oraz River Plate, a po powrocie do Włoch wywalczył sobie stałe miejsce w podstawowym składzie klubu. W 2011 roku przeniósł się do Barcelony, która zapłaciła Udinese 43 miliony dolarów, czyniąc tym samym Sáncheza najdroższym chilijskim piłkarzem w historii. W lipcu 2014 roku został graczem Arsenalu.",
+                "Paul Labile Pogba (ur. 15 marca 1993 w Lagny-sur-Marne) – francuski piłkarz pochodzenia gwinejskiego występujący na pozycji pomocnika w angielskim klubie Manchester United oraz w reprezentacji Francji. Srebrny medalista Mistrzostw Europy 2016. Złoty medalista Mistrzostw Świata U-20 2013. Uczestnik Mistrzostw Świata 2014.",
+                "Andrés Iniesta Luján, wym. [anˈdɾes iˈnjesta luˈxan] (ur. 11 maja 1984 w Fuentealbilli) – hiszpański piłkarz występujący na pozycji pomocnika w hiszpańskim klubie FC Barcelona, którego jest kapitanem. Reprezentant Hiszpanii."
         };
 
 
